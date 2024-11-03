@@ -149,7 +149,7 @@ section {
 }
 
 .section-content h1 {
-  padding-left: 60px;
+  padding-left: max(10px, 3vw);
   font-size: 2rem;
   font-weight: bold;
 }
@@ -165,4 +165,15 @@ footer {
 
 .theme-button svg {
   height: 20px;
+}
+
+.animate-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

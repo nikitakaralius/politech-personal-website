@@ -10,7 +10,6 @@ const addActiveClass = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const currentAnchor = document.querySelector(`.navbar a[href="#${entry.target.id}"]`);
-      console.log(currentAnchor);
       removeActiveClass();
       currentAnchor.classList.add('active');
     }
@@ -35,3 +34,40 @@ themeToggleButton.addEventListener('click', () => {
   body.classList.toggle('dark');
 });
 
+
+
+// ======================
+
+function checkVisibility() {
+  const sections = document.querySelectorAll('.animate-section');
+  const windowHeight = window.innerHeight;
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionBottom = section.getBoundingClientRect().bottom;
+
+    if (sectionTop < windowHeight * 0.75 && sectionBottom > 0) {
+      section.classList.add('visible');
+    }
+  });
+}
+
+// Throttle function to limit how often the scroll event fires
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
+// Add event listener with throttling
+window.addEventListener('scroll', throttle(checkVisibility, 100));
+
+// Initial check on page load
+checkVisibility();
