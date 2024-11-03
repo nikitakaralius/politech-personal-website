@@ -39,7 +39,7 @@ themeToggleButton.addEventListener('click', () => {
 // ======================
 
 function checkVisibility() {
-  const sections = document.querySelectorAll('.animate-section');
+  const sections = document.querySelectorAll('.animated-appearance');
   const windowHeight = window.innerHeight;
 
   sections.forEach(section => {
