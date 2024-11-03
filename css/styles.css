@@ -137,20 +137,17 @@ span {
 
 section {
   min-height: 100vh;
-}
-
-/*temp*/
-section:nth-child(3) {
-  min-height: calc(50vw + 7vh) !important;
+  margin-top: 20px;
 }
 
 .main {
-  margin-top: 70px;
   display: flex;
 }
 
 .section-content {
-
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
 }
 
 .section-content h1 {
@@ -175,7 +172,7 @@ footer {
 .animated-appearance {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .animated-appearance.visible {
