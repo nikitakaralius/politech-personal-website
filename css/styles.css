@@ -177,3 +177,28 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 24px;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel .item {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+.carousel img {
+  width: 50vw;
+  height: 50vw;
+}
