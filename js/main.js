@@ -71,3 +71,21 @@ window.addEventListener('scroll', throttle(checkVisibility, 100));
 
 // Initial check on page load
 checkVisibility();
+
+// =======
+const text = document.querySelector('.main h1');
+const initialFontSize = 10; // Initial font size in vw units
+const finalFontSize = 7; // Final font size in vw units
+const scrollDistance = 500; // Distance over which the shrinking occurs
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition <= scrollDistance) {
+    const shrinkFactor = scrollPosition / scrollDistance;
+    const newFontSize = initialFontSize - (shrinkFactor * (initialFontSize - finalFontSize));
+    text.style.fontSize = `${newFontSize}vw`;
+  } else {
+    text.style.fontSize = `${finalFontSize}vw`;
+  }
+});
