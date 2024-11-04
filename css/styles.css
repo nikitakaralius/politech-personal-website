@@ -142,15 +142,31 @@ section {
 
 .main {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+.main h1 {
+  font-size: min(10vw, 10rem);
+  font-weight: bold;
+  background-image: linear-gradient(-90deg, #35C3F3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #FED2CE 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 100% 100%, 100% 100%;
+  animation:
+      apple-gradient-animation-1 2s ease infinite,
+      apple-gradient-animation-2 2s ease infinite;
 }
 
 .section-content {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
 }
 
-.section-content h1 {
+.section-heading {
   padding-left: max(10px, 3vw);
   font-size: 2rem;
   font-weight: bold;
@@ -212,4 +228,28 @@ footer {
 
 .carousel img {
   flex-shrink: 0;
+}
+
+@keyframes apple-gradient-animation-1 {
+  0% {
+    background-position: 0 50%, 0 50%;
+  }
+  50% {
+    background-position: 100% 50%, 0 50%;
+  }
+  100% {
+    background-position: 0 50%, 0 50%;
+  }
+}
+
+@keyframes apple-gradient-animation-2 {
+  0% {
+    background-position: 0 50%, 0 50%;
+  }
+  50% {
+    background-position: 0 50%, 100% 50%;
+  }
+  100% {
+    background-position: 0 50%, 0 50%;
+  }
 }
