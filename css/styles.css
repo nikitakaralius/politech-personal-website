@@ -135,7 +135,7 @@ span {
   gap: 20px;
 }
 
-section {
+.section {
   min-height: 100vh;
   margin-top: 20px;
 }
@@ -198,8 +198,10 @@ footer {
   padding: 0 10px;
   display: flex;
   overflow-x: auto;
-  gap: 10px;
+  gap: 15px;
   scroll-behavior: smooth;
+  height: calc(35vw + 50px);
+  align-items: center;
 
   ::-webkit-scrollbar {
     display: none;
@@ -213,16 +215,57 @@ footer {
   list-style-type: none;
 }
 
-.carousel .item {
-  flex-shrink: 0;
-  scroll-snap-align: center;
+.apple-card {
   display: flex;
-  width: 50vw;
-  height: 50vw;
-  border-radius: 5%;
-  overflow: hidden;
+  width: 35vw;
+  height: 35vw;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(31, 38, 135, 0.37);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: clip;
 }
 
-.carousel img {
-  flex-shrink: 0;
+.card-content {
+  padding: 20px;
+  color: #fff;
+}
+
+.apple-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px 0 rgba(31, 38, 135, 0.37);
+}
+
+.apple-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.3), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.apple-card:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .main {
+    min-height: 90vh;
+  }
+
+  .apple-card {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .carousel {
+    height: calc(50vw + 50px);
+  }
 }
