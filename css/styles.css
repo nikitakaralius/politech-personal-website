@@ -196,7 +196,6 @@ footer {
 }
 
 .carousel {
-  margin-top: 10px;
   padding: 0 10px;
   display: flex;
   overflow-x: auto;
@@ -258,10 +257,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .main {
-    min-height: 90vh;
-  }
-
   .apple-card {
     width: 50vw;
     height: 50vw;
