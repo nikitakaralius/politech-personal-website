@@ -25,6 +25,7 @@
   --chart-4: #F1C40F;
   --chart-5: #E67E22;
   --background-blur: rgba(0, 0, 0, 0.04);
+  --shadow: rgba(31, 38, 135, 0.37);
 }
 
 .dark {
@@ -53,6 +54,7 @@
   --chart-4: #9933CC;
   --chart-5: #CC3366;
   --background-blur: rgba(0, 0, 0, 0.3);
+  --shadow: rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -223,7 +225,7 @@ footer {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 4px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 4px 4px 0 var(--shadow);
   transition: all 0.3s ease;
   position: relative;
   overflow: clip;
@@ -236,7 +238,7 @@ footer {
 
 .apple-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 5px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 5px 5px 0 var(--shadow);
 }
 
 .apple-card::after {
