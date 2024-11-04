@@ -155,11 +155,7 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-size: 100% 100%, 100% 100%;
   transition: font-size 0.1s ease-out;
-  animation:
-      apple-gradient-animation-1 2s ease infinite,
-      apple-gradient-animation-2 2s ease infinite;
 }
 
 .section-content {
@@ -229,28 +225,4 @@ footer {
 
 .carousel img {
   flex-shrink: 0;
-}
-
-@keyframes apple-gradient-animation-1 {
-  0% {
-    background-position: 0 50%, 0 50%;
-  }
-  50% {
-    background-position: 100% 50%, 0 50%;
-  }
-  100% {
-    background-position: 0 50%, 0 50%;
-  }
-}
-
-@keyframes apple-gradient-animation-2 {
-  0% {
-    background-position: 0 50%, 0 50%;
-  }
-  50% {
-    background-position: 0 50%, 100% 50%;
-  }
-  100% {
-    background-position: 0 50%, 0 50%;
-  }
 }
