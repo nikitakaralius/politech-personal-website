@@ -139,7 +139,6 @@ span {
 
 .section {
   min-height: 100vh;
-  margin-top: 20px;
 }
 
 .main {
@@ -266,4 +265,8 @@ footer {
   .carousel {
     height: calc(50vw + 50px);
   }
+}
+
+.navigation-offset {
+  padding: 60px 0;
 }
