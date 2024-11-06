@@ -67,10 +67,6 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -84,21 +80,21 @@ a {
 header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 40px;
   z-index: 1024;
   background: var(--background-blur);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 10px;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   align-items: center;
+  flex-shrink: 1;
   justify-content: space-between;
-  margin: 0 -1rem;
 }
 
 .nav-list-mobile {
@@ -108,6 +104,7 @@ header {
 .nav-link {
   color: var(--muted-foreground);
   transition: 0.2s ease-in-out;
+  padding: 0 1rem;
 }
 
 .nav-link:hover {
@@ -117,6 +114,23 @@ header {
 .nav-link-active {
   color: var(--primary) !important;
   transform: scale(1.1);
+}
+
+.nav-link-logo {
+  width: 40px;
+  height: 40px;
+  align-content: center;
+}
+
+.theme-toggle {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: var(--primary); /* Set the stroke color you want */
+  -webkit-mask: url("/main/img/navbar/theme-toggle.svg") center no-repeat;
+  mask: url("/main/img/navbar/theme-toggle.svg") center no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 .section {
@@ -155,15 +169,6 @@ header {
 footer {
   padding: 20px 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.theme-toggle {
-  cursor: pointer;
-  background-image: image('../img/navbar/theme-toggle.svg');
-}
-
-.theme-toggle svg {
-  height: 20px;
 }
 
 .animated-appearance {
@@ -239,7 +244,34 @@ footer {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  header {
+    transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1);
+  }
+
+  .nav-list {
+    margin-top: 0;
+  }
+
+  .nav-list-larger {
+    display: none;
+  }
+
+  .nav-list-mobile {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-item-hidden {
+    display: none;
+  }
+
   .apple-card {
     width: 50vw;
     height: 50vw;
