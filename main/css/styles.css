@@ -214,6 +214,7 @@ footer {
 
 .carousel li {
   list-style-type: none;
+  cursor: pointer;
 }
 
 .apple-card {
