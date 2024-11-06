@@ -28,7 +28,7 @@ sections.forEach(section => {
 })
 
 const body = document.querySelector('body');
-const themeToggleButton = document.getElementById('theme-toggle');
+const themeToggleButton = document.querySelector('.theme-toggle');
 
 themeToggleButton.addEventListener('click', () => {
   body.classList.toggle('dark');

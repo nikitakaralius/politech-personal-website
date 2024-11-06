@@ -175,11 +175,12 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.theme-button {
+.theme-toggle {
   cursor: pointer;
+  background-image: image('../img/navbar/theme-toggle.svg');
 }
 
-.theme-button svg {
+.theme-toggle svg {
   height: 20px;
 }
 
