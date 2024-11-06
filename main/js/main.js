@@ -1,4 +1,4 @@
-const anchors = document.querySelectorAll('.navbar a');
+const anchors = document.querySelectorAll('.nav a');
 
 const removeActiveClass = () => {
   anchors.forEach(dot => {
@@ -9,7 +9,7 @@ const removeActiveClass = () => {
 const addActiveClass = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const currentAnchor = document.querySelector(`.navbar a[href="#${entry.target.id}"]`);
+      const currentAnchor = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
       removeActiveClass();
       currentAnchor.classList.add('active');
     }

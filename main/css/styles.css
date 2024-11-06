@@ -111,18 +111,18 @@ span {
   color: transparent;
 }
 
-.navbar {
+.nav {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
-.navbar a {
+.nav a {
   color: var(--muted-foreground);
   transition: 0.2s ease-in-out;
 }
 
-.navbar a:hover {
+.nav a:hover {
   color: var(--primary);
 }
 
