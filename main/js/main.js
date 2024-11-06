@@ -17,7 +17,7 @@ const addActiveClass = (entries, observer) => {
 }
 
 const options = {
-  threshold: 0.98
+  threshold: 0.97
 };
 
 const observer = new IntersectionObserver(addActiveClass, options);
@@ -94,10 +94,4 @@ window.addEventListener('scroll', () => {
 document.querySelector('.mobile-menu').addEventListener('click', () => {
   document.body.classList.toggle('no-scroll');
   document.querySelector('header').classList.toggle('active');
-
-  document
-    .querySelectorAll('.nav-link')
-    .forEach(x => x.addEventListener('click', () => {
-      document.querySelector('.mobile-menu').click();
-    }), { once: true });
 });
