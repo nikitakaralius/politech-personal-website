@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Землекопы</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container">
+  <div>
+    <label for="trenchLength">Введите длину канавы: </label>
+    <input id="trenchLength" type="number" required />
+  </div>
+
+  <div>
+    <label for="isBrigadeMechanized">Бригада механизирована?</label>
+    <input id="isBrigadeMechanized" type="checkbox">
+  </div>
+
+  <button id="calculateResult">Определить кол-во землекопов</button>
+
+  <div id="resultBlock"></div>
+
+  <script src="js/script.js" defer></script>
+</div>
+</body>
+</html>
