@@ -1,23 +1,23 @@
-const anchors = document.querySelectorAll('.nav a');
+const anchors = document.querySelectorAll('.nav-link');
 
 const removeActiveClass = () => {
   anchors.forEach(dot => {
-    dot.classList.remove('active');
+    dot.classList.remove('nav-link-active');
   });
 }
 
 const addActiveClass = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const currentAnchor = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
+      const currentAnchor = document.querySelector(`a.nav-link[href="#${entry.target.id}"]`);
       removeActiveClass();
-      currentAnchor.classList.add('active');
+      currentAnchor.classList.add('nav-link-active');
     }
   });
 }
 
 const options = {
-  threshold: 0.8
+  threshold: 0.97
 };
 
 const observer = new IntersectionObserver(addActiveClass, options);
