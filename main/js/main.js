@@ -27,11 +27,10 @@ sections.forEach(section => {
   observer.observe(section);
 })
 
-const body = document.querySelector('body');
 const themeToggleButton = document.querySelectorAll('.theme-toggle');
 
 themeToggleButton.forEach(x => x.addEventListener('click', () => {
-  body.classList.toggle('dark');
+  document.body.classList.toggle('dark');
 }));
 
 
@@ -93,5 +92,6 @@ window.addEventListener('scroll', () => {
 
 // =====
 document.querySelector('.mobile-menu').addEventListener('click', () => {
+  document.body.classList.toggle('no-scroll');
   document.querySelector('header').classList.toggle('active');
 });

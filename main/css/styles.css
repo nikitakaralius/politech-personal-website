@@ -60,7 +60,6 @@
 * {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   text-decoration: none;
   font-family: 'Apple Symbols', sans-serif;
   font-weight: lighter;
@@ -70,6 +69,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  scroll-behavior: smooth;
 }
 
 a {
@@ -87,6 +87,10 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0 10px;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .nav-list {
@@ -245,6 +249,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    scroll-behavior: auto;
+  }
+
   header {
     transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1),
                 height 0.56s cubic-bezier(0.32, 0.08, 0.24, 1);
