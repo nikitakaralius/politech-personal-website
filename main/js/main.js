@@ -89,3 +89,9 @@ window.addEventListener('scroll', () => {
     text.style.fontSize = `${finalFontSize}vw`;
   }
 });
+
+
+// =====
+document.querySelector('.mobile-menu').addEventListener('click', () => {
+  document.querySelector('header').classList.toggle('active');
+});
