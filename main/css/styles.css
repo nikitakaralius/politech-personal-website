@@ -138,8 +138,8 @@ header {
   height: 20px;
   cursor: pointer;
   background-color: var(--primary);
-  -webkit-mask: url("/main/img/navbar/theme-toggle.svg") center no-repeat;
-  mask: url("/main/img/navbar/theme-toggle.svg") center no-repeat;
+  -webkit-mask: url("../img/navbar/theme-toggle.svg") center no-repeat;
+  mask: url("../img/navbar/theme-toggle.svg") center no-repeat;
   -webkit-mask-size: cover;
   mask-size: cover;
 }
