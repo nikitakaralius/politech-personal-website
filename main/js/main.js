@@ -34,9 +34,6 @@ themeToggleButton.forEach(x => x.addEventListener('click', () => {
 }));
 
 
-
-// ======================
-
 function checkVisibility() {
   const sections = document.querySelectorAll('.animated-appearance');
   const windowHeight = window.innerHeight;
@@ -51,7 +48,6 @@ function checkVisibility() {
   });
 }
 
-// Throttle function to limit how often the scroll event fires
 function throttle(func, limit) {
   let inThrottle;
   return function() {
@@ -65,17 +61,14 @@ function throttle(func, limit) {
   }
 }
 
-// Add event listener with throttling
 window.addEventListener('scroll', throttle(checkVisibility, 100));
 
-// Initial check on page load
 checkVisibility();
 
-// =======
 const text = document.querySelector('.main h1');
-const initialFontSize = 10; // Initial font size in vw units
-const finalFontSize = 7; // Final font size in vw units
-const scrollDistance = 500; // Distance over which the shrinking occurs
+const initialFontSize = 10;
+const finalFontSize = 7;
+const scrollDistance = 500;
 
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
@@ -90,7 +83,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-// =====
 document.querySelector('.mobile-menu').addEventListener('click', () => {
   document.body.classList.toggle('no-scroll');
   document.querySelector('header').classList.toggle('active');
