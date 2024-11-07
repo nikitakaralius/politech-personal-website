@@ -248,6 +248,24 @@ footer {
   opacity: 1;
 }
 
+.stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.stack-item {
+  height: max(32%, 320px);
+  width: max(32%, 320px);
+}
+
+.stack-item p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 768px) {
   * {
     scroll-behavior: auto;
@@ -391,6 +409,10 @@ footer {
   .apple-card {
     width: 50vw;
     height: 50vw;
+  }
+
+  .section-heading {
+    padding: 30px;
   }
 
   .carousel {
