@@ -175,6 +175,11 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+footer a {
+  display: inline;
+  color: var(--chart-2);
+}
+
 .animated-appearance {
   opacity: 0;
   transform: translateY(50px);
@@ -422,4 +427,9 @@ footer {
 
 .navigation-offset {
   padding: 60px 0;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 15px;
 }
