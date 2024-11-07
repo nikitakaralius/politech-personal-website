@@ -289,7 +289,7 @@ footer a {
   font-weight: bold;
 }
 
-@media screen and (max-width: 35em) {
+@media screen and (max-width: 768px) {
   * {
     scroll-behavior: auto;
   }
@@ -429,6 +429,15 @@ footer a {
     }
   }
 
+  .carousel {
+    overflow: auto;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+
   .card {
     width: 300px;
     height: 300px;
@@ -438,12 +447,8 @@ footer a {
     padding: 30px;
   }
 
-  .carousel {
-    height: 350px;
-  }
-
   .contact-form {
-    width: 95vw;
+    width: 85vw !important;
   }
 }
 
@@ -455,7 +460,7 @@ footer a {
   display: flex;
   flex-direction: column;
   margin: 40px auto;
-  width: max(50%, 450px);
+  width: 600px;
   gap: 15px;
   padding: 30px;
   backdrop-filter: blur(10px);
