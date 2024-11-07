@@ -217,7 +217,6 @@ footer a {
   display: flex;
   width: 35vw;
   height: 35vw;
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -429,7 +428,44 @@ footer a {
   padding: 60px 0;
 }
 
-.contact-list {
-  list-style-type: none;
-  padding: 15px;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  width: max(50%, 450px);
+  gap: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 4px 0 var(--shadow);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  resize: vertical;
+  background: var(--background);
+  color: var(--primary);
+  box-shadow: 0 1px 1px 0 var(--shadow);
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--chart-2);
+  color: var(--primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
