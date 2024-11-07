@@ -208,7 +208,7 @@ footer {
   cursor: pointer;
 }
 
-.apple-card {
+.card {
   display: flex;
   width: 35vw;
   height: 35vw;
@@ -227,12 +227,12 @@ footer {
   color: #fff;
 }
 
-.apple-card:hover {
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 5px 0 var(--shadow);
 }
 
-.apple-card::after {
+.card::after {
   content: '';
   position: absolute;
   top: 0;
@@ -244,7 +244,7 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-.apple-card:hover::after {
+.card:hover::after {
   opacity: 1;
 }
 
@@ -406,7 +406,7 @@ footer {
     }
   }
 
-  .apple-card {
+  .card {
     width: 50vw;
     height: 50vw;
   }
