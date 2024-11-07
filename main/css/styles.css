@@ -278,6 +278,11 @@ footer a {
   font-size: 14px;
 }
 
+.stack-item h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
   * {
     scroll-behavior: auto;
