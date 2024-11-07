@@ -57,11 +57,18 @@
   --shadow: rgba(255, 255, 255, 0.2);
 }
 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'Apple Symbols', sans-serif;
+  font-family: 'San Francisco', sans-serif;
+  font-size: 14px;
   font-weight: lighter;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -173,6 +180,7 @@ header {
 footer {
   padding: 20px 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
 }
 
 footer a {
@@ -446,8 +454,7 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
+input,
 textarea {
   width: 100%;
   padding: 10px;
@@ -463,8 +470,8 @@ textarea {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: var(--chart-2);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: var(--background);
   border: none;
   border-radius: 5px;
   cursor: pointer;
