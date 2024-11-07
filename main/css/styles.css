@@ -137,7 +137,7 @@ header {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  background-color: var(--primary); /* Set the stroke color you want */
+  background-color: var(--primary);
   -webkit-mask: url("/main/img/navbar/theme-toggle.svg") center no-repeat;
   mask: url("/main/img/navbar/theme-toggle.svg") center no-repeat;
   -webkit-mask-size: cover;
@@ -271,10 +271,16 @@ footer a {
 .stack-item {
   height: max(32%, 320px);
   width: max(32%, 320px);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 4px 0 var(--shadow);
+  padding: 30px;
 }
 
 .stack-item p {
   margin-top: 10px;
+  min-height: 150px;
   font-size: 14px;
 }
 
@@ -424,8 +430,8 @@ footer a {
   }
 
   .card {
-    width: 50vw;
-    height: 50vw;
+    width: 300px;
+    height: 300px;
   }
 
   .section-heading {
@@ -433,7 +439,11 @@ footer a {
   }
 
   .carousel {
-    height: calc(50vw + 50px);
+    height: 350px;
+  }
+
+  .contact-form {
+    width: 95vw;
   }
 }
 
