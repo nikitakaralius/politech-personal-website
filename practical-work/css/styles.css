@@ -22,9 +22,3 @@ footer {
   position: absolute;
   bottom: 0;
 }
-
-@media screen and (max-width: 768px) {
-  footer {
-    bottom: 100px;
-  }
-}
