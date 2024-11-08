@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'San Francisco', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -50,6 +67,17 @@ header {
   width: 40px;
   height: 40px;
   align-content: center;
+}
+
+.theme-toggle {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: var(--primary);
+  -webkit-mask: url("./../img/navbar/theme-toggle.svg") center no-repeat;
+  mask: url("./../img/navbar/theme-toggle.svg") center no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -191,4 +219,15 @@ header {
       opacity: 1;
     }
   }
+}
+
+footer {
+  padding: 20px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+}
+
+footer a {
+  display: inline;
+  color: var(--chart-2);
 }

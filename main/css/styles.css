@@ -1,34 +1,6 @@
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  font-family: 'San Francisco', sans-serif;
-  font-size: 14px;
-  font-weight: lighter;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-}
-
-.theme-toggle {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  background-color: var(--primary);
-  -webkit-mask: url("./../img/navbar/theme-toggle.svg") center no-repeat;
-  mask: url("./../img/navbar/theme-toggle.svg") center no-repeat;
-  -webkit-mask-size: cover;
-  mask-size: cover;
 }
 
 .section {

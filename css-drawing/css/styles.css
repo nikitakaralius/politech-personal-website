@@ -1,13 +1,16 @@
 body {
+  background-color: var(--background);
+
+  --scale: 2;
+}
+
+.container {
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #1e1e1e;
-
-  --scale: 2;
 }
 
 .drawing {
@@ -253,4 +256,18 @@ body {
   transform: rotate(-45deg);
   right: 2.3em;
   bottom: 4em;
+}
+
+footer {
+  padding: 20px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    --scale: 1;
+  }
 }
